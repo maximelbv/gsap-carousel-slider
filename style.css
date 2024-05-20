@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('./static/fonts/pp-neue-montreal/OTF/PPNeueMontreal-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Gorgeous';
+    src: url('./static/fonts/gorgeous/Gorgeous-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PP Neue Montreal';
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p, a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+nav > div {
+    flex: 1;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.shop {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.copy {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100vw;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide-active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-next {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-next .slide-next-img {
+    width: 250px;
+    height: 350px;
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+}
+
+.slider-content {
+    position: absolute;
+    left: 2rem;
+    bottom: 0;
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.slider-content-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.slider-content-next {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Gorgeous';
+    font-size: 150px;
+    color: #fff;
+}
+
+h1 span {
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .links, .shop, footer {
+        display: none;
+    }
+    .logo {
+        justify-content: center;
+        text-align: center;
+    }
+}
